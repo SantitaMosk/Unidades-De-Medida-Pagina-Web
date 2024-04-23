@@ -1,0 +1,54 @@
+body{
+    background-image: url(IMAGENES/fondo2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.unico{
+    border-radius: 1rem;
+    width: 60%;
+    height: 40%;
+    border-style: dotted;
+    background-color: black;
+}
+
+.conteiner-imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img1-1{
+    width: 500px;
+    height: 20rem;
+}
+
+.h1{
+    font-size: 2rem;
+    font-family: cursive;
+    color: blueviolet;
+    width: 30%;
+    height: 30%;
+}
+
+.h2{
+    color: white;
+}
+.introduc{
+    color: white;
+}
+
+.contenedor-1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.contenedor-2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.contenedor-3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}

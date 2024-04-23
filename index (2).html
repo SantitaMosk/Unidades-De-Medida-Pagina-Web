@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos.css">
+    <title>UNIDADES DE MEDIDA</title>
+    <style>
+        h1{
+            font-size: 2rem;
+            font-family: cursive;
+            color: rgb(226, 116, 43);
+            width: 70%;
+            height: 70%;
+        }
+        h2{
+            font-family: cursive;
+            color: rgb(226, 116, 43);
+        }
+        p{
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="unico"> 
+        <h1>Unidades De Medida: Explicacion:</h1>
+    </header>
+    <section class="contenedor-1">
+        <p>Las medidas en CSS se emplean, entre otras, para definir la altura, anchura y 
+            márgenes de los elementos y para establecer el tamaño de letra del texto.<br> 
+            Todas las medidas se indican como un valor numérico entero o decimal seguido de una unidad de medida 
+            (sin ningún espacio en blanco entre el número y la unidad de medida).<br>
+
+            CSS divide las unidades de medida en dos grupos: absolutas y relativas. 
+            Las medidas relativas definen su valor en relación con otra medida, 
+            por lo que para obtener su valor real, se debe realizar alguna operación con el valor indicado. 
+            Las unidades absolutas establecen de forma completa el valor de una medida, 
+            por lo que su valor real es directamente el valor indicado.<br>
+            
+            Si el valor es 0, la unidad de medida es opcional.
+            Si el valor es distinto a 0 y no se indica ninguna unidad, 
+            la medida se ignora completamente,
+            lo que suele ser uno de los errores más habituales de los diseñadores que empiezan con CSS.<br>
+            Algunas propiedades permiten indicar medidas negativas, aunque habitualmente sus valores son
+            positivos. Si el valor decimal de una medida es inferior a 1, se puede omitir el 0 de la izquierda
+            (0.5em es equivalente a .5em).</p>
+    </section>
+    <hr>
+    <section class="contenedor-2">
+        <header>
+            <h1 class="unico">Unidades Relativas:</h1>
+            <p>La unidades relativas, a diferencia de las absolutas, no están completamente definidas,<br> 
+                ya que su valor siempre está referenciado respecto a otro valor. A pesar de su aparente dificultad, son 
+                las más utilizadas en el diseño web por la flexibilidad con la que se adaptan a los diferentes medios.
+                Las unidades de medida en CSS de tipo relativo dependen del elemento o factor al que hagan referencia.<br> Aunque pueden ser inicialmente más complejas, 
+                algunos prefieren las unidades de medidas de css relativas porque los tamaños de los elementos dependen el uno del otro.<br>
+                Esto hace que las proporciones entre los elementos se mantengan y todo encaje.</p>
+                <div>
+                    <h2>em</h2>
+                    <p>
+                        Esta unidad es relativa al tamaño de letra o font size establecida en el navegador. Su nombre es em porque el tamaño de letra se basa en el tamaño de la letra eme.<br>
+                        A menos que haya sido modificada por el usuario, normalmente este tamaño es de 16px.EJEMPLO:
+                        <br>
+                        <br>
+                        .element {<br>
+                            background: blue;<br>
+                            font-size: 32px;<br>
+                            width: 2em;<br>
+                            height: 2em;<br>
+                            color: white;<br>
+                          }
+                    </p>
+                </div>
+                
+                <div>
+                    <h2>ex</h2>
+                    <p>
+                        Esta unidad es relativa a la altura de la «x» del elemento. <br>
+                        También se conoce por ser más o menos la mitad del tamaño de la fuente del navegador o 0.5em.
+                    </p>
+                </div>
+                <div>
+                    <h2>ch</h2>
+                    <p>
+                        Conocido en inglés como zero width, esta unidad de medida es relativa al tamaño del ancho del cero en la fuente del navegador.EJEMPLO:
+                        <br>
+                        <br>
+                        .element {<br>
+                            font-family: "Victor Mono", monospace;<br>
+                            font-size: 2rem;<br>
+                            background: #111;<br>
+                            color: #eee;<br>
+                            width: 8ch;<br>
+                            } 
+                    </p>
+                </div>
+                <div>
+                    <h2>%</h2>
+                        <p>
+                            Esta unidad es relativa al tamaño del elemento padre. EJEMPLO:
+                            <br>
+                            <br>
+                            .contenedor{<br>
+                            border-style: double;<br>
+                            border-bottom:30%;<br>
+                            width:45%;<br>
+                            height:15%;<br>
+                            background-color: yellow<br>
+                            }
+                        </p>
+                </div>
+                <div>
+                    <h2>rem</h2>
+                    <p>
+                        La unidad rem o root em es similar a la unidad em, pero, en vez de tomar como base el tamaño de letra del navegador, la unidad em toma el tamaño base del documento HTML.<br> 
+                        Este tamaño se personaliza bajo la etiqueta :root {font-size}. De este modo, podemos usar rem para dimensionar nuestros elementos con un múltiplo del tamaño base.<br>
+                        Esta unidad puede ser muy útil a la hora de dimensionar una página cuando el usuario hace zoom, pues los elementos serán relativos unos a otros y mantendrán su proporción. 
+                        Esta es una unidad de medida comúnmente utilizada para el tamaño de fuente en css. EJEMPLO:
+                        <br>
+                        <br>
+                        :root {<br>
+                            font-size: 22px;    /* Tamaño base */<br>
+                        }<br>
+                          
+                          h1 {<br>
+                            font-size: 2rem;    /* El doble: 2 x 22px = 44px */<br>
+                          }<br>
+                          
+                          h2 {<br>
+                            font-size: 1rem;    /* El mismo: 1 x 22px = 22px */<br>
+                          }<br>
+                    </p>
+                </div>
+                <div>
+                    <h2>ic</h2>
+                    <p>
+                        La unidad ic es una unidad de nueva generación que permite indicar tamaños basados en el tamaño típico de un carácter CJK.<br> 
+                        Las siglas CJK son las que se utilizan para hacer referencia a carácteres Chino-Japonés-Koreano.
+                    </p>
+                </div>
+                <div>
+                    <h2>lh</h2>
+                    <p>
+                        La unidad lh es una unidad de nueva generación que permite indicar tamaños basados en el interlineado de la tipografía. <br>
+                        Es decir, el tamaño se define en base a la propiedad line-height, por lo que se establecen en base a su valor. EJEMPLO:
+                        <br>
+                        <br>
+                        .element {<br>
+                            background: indigo;<br>
+                            color: #eee;<br>
+                            font-family: "Victor Mono", monospaced;<br>
+                            font-size: 2rem;<br>
+                            height: 2lh;<br>
+                            line-height: 120%;<br>
+                          }
+
+
+                    </p>
+                </div>
+                <img src="./IMAGENES/descarga22.png">
+        </header>
+    </section>
+    <hr>
+    <section class="contenedor-3">
+        <header>
+            <h1 class="unico">Unidades Absolutas:</h1>
+            <p>Una medida indicada mediante unidades absolutas está completamente definida, ya que su valor no depende de otro valor de referencia. A continuación se muestra la lista completa de unidades absolutas definidas por CSS y su significado:
+
+                in, pulgadas ("inches", en inglés). Una pulgada equivale a 2.54 centímetros.
+                cm, centímetros.
+                mm, milímetros.
+                pt, puntos. Un punto equivale a 1 pulgada/72, es decir, unos 0.35 milímetros.
+                pc, picas. Una pica equivale a 12 puntos, es decir, unos 4.23 milímetros</p>
+                <div>
+                    <h2>in</h2>
+                    <p>
+                        hace referencia a las pulgadas, que son iguales a 2.54cm.
+                    </p>
+                </div>
+                <div>
+                    <h2>cm</h2>
+                    <p>
+                        Se refiere a centimetros.
+                    </p>
+                </div>
+                <div>
+                    <h2>mm</h2>
+                    <p>
+                        Milimetros.
+                    </p>
+                </div>
+                <div>
+                    <h2>q</h2>
+                    <p>
+                        Se refiere a un cuarto de la unidad mm. 1q=0.248mm.
+                    </p>
+                </div>
+                <div>
+                    <h2>pt</h2>
+                    <p>
+                        Un punto es igual a 1/72 de una pulgada o 0.35mm.
+                    </p>
+                </div>
+                <div>
+                    <h2>pc</h2>
+                    <p>
+                        Una pica es igual a 12 puntos, o sea 4.23mm.
+                    </p>
+                </div>
+                <div>
+                    <h2>px</h2>
+                    <p>
+                        esta etiqueta se refiere a los píxeles que, aunque son absolutos (0.26mm), 
+                        también son relativos a la densidad de la pantalla.
+                    </p>
+                </div>
+                <img src="./IMAGENES/absoluta.png">
+        </header>
+    </section>
+    <div class="contenedor-3">
+        <h1 class="unico">Ejemplos De Como Se Utilizan Las Unidades De Medida Absolutas:</h1>
+        <p>
+            /* El cuerpo de la página debe mostrar un margen de media pulgada */
+            body { margin: 0.5in; }
+            <br>
+            /* Los elementos h1 deben mostrar un interlineado de 2 centímetros */
+            h1 { line-height: 2cm; }
+             <br>
+            /* Las palabras de todos los párrafos deben estar separadas 4 milímetros entre si */
+            p { word-spacing: 4mm; }
+            <br>
+            /* Los enlaces se deben mostrar con un tamaño de letra de 12 puntos */
+            a { font-size: 12pt; }
+            <br>
+            /* Los elementos span deben tener un tamaño de letra de 1 pica */
+            span { font-size: 1pc; }
+        </p>
+    </div>
+    <hr>
+    <section class="contenedor-3">
+        <header>
+            <h1 class="unico">Unidades Del Viewport:</h1>
+            <p>
+                Las siguientes unidades son relativas al viewport, que es el espacio o trozo de pantalla donde se renderiza y se muestra la página web.<br>
+                Estas unidades sirven para dimensionar la pantalla y organizar los elementos dentro de esta.
+            </p>
+            <div>
+            <h2>vw</h2>
+            <p>
+                La unidad vw es un tipo de unidad que hace referencia al ancho del viewport (región visible de la página en el navegador). 
+                Por ejemplo, si definimos 50vw, estamos indicando un 50% del ancho actual del navegador. EJEMPLO:
+                <br>
+                <br>
+                body {<br>
+                    margin: 0; /* Reset */<br>
+                   }
+                  
+                  .container {<br>
+                    width: 50vw;<br>
+                    height: 50px;<br>
+                    background: indigo;<br>
+                  }
+            </p>
+            </div>
+            <div>
+                <h2>vh</h2>
+                <p>
+                    Por su parte, la unidad vh hace referencia de la misma forma al alto del viewport. 
+                    Si con la unidad vw podemos hacer referencia al ancho, con vh hacemos referencia al alto. EJEMPLO:
+                    <br>
+                    <br>
+                    body {<br>
+                        margin: 0; /* Reset */<br>
+                    }<br>
+                      
+                      .container {<br>
+                        width: 50vw;<br>
+                        height: 100vh;<br>
+                        background: indigo;<br>
+                      }
+                </p>
+            </div>
+            <div>
+                <h2>vmin</h2>
+                <p>
+                    la unidad vmin permite devolvernos la cantidad más pequeña entre el valor de vw y de vh. De esta forma, 
+                    si queremos el tamaño mínimo de estos dos, no tenemos que controlarlo, simplemente utilizamos la unidad vmin. EJEMPLO:
+                    <br>
+                    <br>
+                    .container {<br>
+                        width: 50vmin;<br>
+                        height: 50vmin;<br>
+                        background: indigo;<br>
+                      }
+                </p>
+            </div>
+            <div>
+                <h2>vmax</h2>
+                <p>
+                    De la misma forma, la unidad vmax permite hacer lo mismo, pero con el valor máximo. 
+                    En el mismo caso anterior, el valor máximo sería 800px, por lo que 50vmax sería 400px. EJEMPLO:
+                    <br>
+                    <br>
+                    .container {<br>
+                        width: 50vmax;<br>
+                        height: 50vmax;<br>
+                        background: indigo;<br>
+                      }
+                </p>
+            </div>
+        </header>
+    </section>
+    <hr>
+    <section>
+        <header>
+            <h1 class="unico">Datos Que Te Pueden Aportar:</h1>
+            <h2>¿Que Tipo De Unidad De Medida Es La Mejor Para Una Fuente?</h2>
+            <p>Básicamente, la mejor unidad para trabajar textos adaptables en CSS es el rem, "la unidad perfecta". 
+                Esta unidad de medida quiere decir "root em",<br> y es aquella que nos remite al tamaño de fuente que tenemos en la raíz.<br>
+                 Por ejemplo, si nosotros tomamos el BODY y tiene un font­size de 100% (lo que corresponderá generalmente con unos 16 píxeles), <br>
+                sabemos que siempre rem será equivalente a esos 16 píxeles, lo pongas donde lo pongas.</p><br>
+            <h2>¿Que Tipo De Unidad De Medida Es La Mejor Para Los Contenedores</h2>
+            <p>
+                La unidad de medida porcentual se podria decir que es la mas indicada al momento de usarla en un class de container ya que es la que se usa por defecto en los elementos HTML en donde de manera predeterminada
+                 cada elemento de bloque usa un ancho del 100%, es por eso que cuando achicamos la ventana del navegador con una página que no tenga estilos,
+                la página se adapta, ya que siempre usará el ancho total visible.
+            </p>
+        </header>
+    </section>
+</body>
+</html>
